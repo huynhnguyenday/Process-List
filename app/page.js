@@ -32,9 +32,9 @@ export default function Home() {
 
   return (
     <div>
-      <nav className="flex bg-neutral-900 items-center lg:py-4 top-0 left-0 w-full z-50">
+      <nav className="flex bg-neutral-900 items-center justify-between lg:py-4 top-0 left-0 w-full z-50">
         {/* Logo & Email */}
-        <div className="flex items-center lg:ml-40 ml-4 my-4 lg:my-2">
+        <div className="flex items-center lg:ml-28 ml-12 my-4 lg:my-2">
           <span>
             <Image
               src={"/image/bg.png"}
@@ -55,7 +55,8 @@ export default function Home() {
 
         {/* Hire Me Button */}
         <button
-          className="ml-0 lg:ml-96 px-8 py-[15px] text-base text-white rounded-full transition-all duration-300 font-bold bg-[linear-gradient(90deg,_rgb(42,20,84)_0%,_rgb(135,80,247)_51%,_rgb(42,20,84)_100%)] bg-[length:300%_100%] bg-right hover:bg-left"
+          onClick={() => window.open("https://huynh.vercel.app/", "_blank")}
+          className="mr-12 lg:mr-40 px-8 py-[15px] text-base text-white rounded-full transition-all duration-300 font-bold bg-[linear-gradient(90deg,_rgb(42,20,84)_0%,_rgb(135,80,247)_51%,_rgb(42,20,84)_100%)] bg-[length:300%_100%] bg-right hover:bg-left"
         >
           {isVietMode ? "Liên Hệ!" : "Hire Me!"}
         </button>

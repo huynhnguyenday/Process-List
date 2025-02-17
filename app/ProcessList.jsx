@@ -5,7 +5,7 @@ import { FaFire } from "react-icons/fa";
 
 export const ProcessList = () => {
   return (
-    <div className="h-screen w-full bg-neutral-900 text-neutral-50">
+    <div className="min-h-screen w-full bg-neutral-900 text-neutral-50">
       <Board />
     </div>
   );
@@ -15,7 +15,7 @@ const Board = () => {
   const [cards, setCards] = useState(DEFAULT_CARDS);
 
   return (
-    <div className="flex h-full w-full gap-3 overflow-scroll p-12 lg:justify-center">
+    <div className="flex flex-col md:flex-row h-full w-full gap-3 p-6 items-center lg:items-start lg:justify-center">
       <Column
         title="Backlog"
         column="backlog"
@@ -152,7 +152,7 @@ const Column = ({ title, headingColor, cards, column, setCards }) => {
   const filteredCards = cards.filter((c) => c.column === column);
 
   return (
-    <div className="w-56 shrink-0">
+    <div className="w-64 lg:w-64 shrink-0">
       <div className="mb-3 flex items-center justify-between">
         <h3 className={`font-medium ${headingColor}`}>{title}</h3>
         <span className="rounded text-sm text-neutral-400">
