@@ -12,15 +12,20 @@ export const ProcessList = () => {
 };
 
 const Board = () => {
-  const [cards, setCards] = useState(() => {
-    // Lấy dữ liệu từ local storage hoặc khởi tạo mảng rỗng nếu không có
-    const storedCards = localStorage.getItem("cards");
-    return storedCards ? JSON.parse(storedCards) : [];
-  });
+  const [cards, setCards] = useState([]);
 
-  // Cập nhật local storage mỗi khi `cards` thay đổi
-  React.useEffect(() => {
-    localStorage.setItem("cards", JSON.stringify(cards));
+  // Lấy dữ liệu từ localStorage chỉ khi chạy trên client
+  useEffect(() => {
+    const storedCards = localStorage.getItem("cards");
+    if (storedCards) {
+      setCards(JSON.parse(storedCards));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cards", JSON.stringify(cards));
+    }
   }, [cards]);
 
   return (
