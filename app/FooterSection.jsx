@@ -16,7 +16,7 @@ const FooterSection = () => {
       <div className="flex justify-center items-center text-7xl font-bold pb-10">
         <span>
           <Image
-            src={"/image/favicon.png"}
+            src={"/images/favicon.png"}
             alt="Language Flag"
             width={70}
             height={70}

@@ -13,7 +13,7 @@ export default function Home() {
         <div className="flex items-center lg:ml-28 ml-12 my-4 lg:my-2">
           <span>
             <Image
-              src={"/image/favicon.png"}
+              src={"/images/favicon.png"}
               alt="Language Flag"
               width={70}
               height={70}
