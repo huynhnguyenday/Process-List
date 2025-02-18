@@ -27,7 +27,7 @@ const FooterSection = () => {
 
       {/* Navigation Links */}
       <div className="flex justify-center gap-8 pb-6 mt-4 text-sm md:text-base text-white">
-        {[{ id: "contact", label: "Liên hệ" }].map((link) => (
+        {[{ id: "contact", label: "Contact" }].map((link) => (
           <button
             key={link.id}
             onClick={() => window.open("https://huynh.vercel.app/#contact", "_blank")}
